@@ -1,0 +1,154 @@
+.selector-for-some-widget {
+  box-sizing: content-box;
+} 
+
+
+
+#user-nav{
+  position:fixed;    
+  width: 15%;
+  max-width: 40%;
+  height: 100%;
+  align-items: start;
+  align-content: start;
+  background-image: url("\src\assets\sidebar-white.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  
+}
+
+.title-nav{
+background-color: transparent;
+height: 40px;
+text-align: center;
+align-self: center;
+padding-top: 18px;
+color:  #160c64;
+margin-bottom: 20px;
+
+}
+.title-change{
+margin:auto;
+height: 2px;
+width: 80%;
+background-color:  gray;
+margin-bottom: 20px;
+}
+
+#nav-columns{
+background-color: transparent;
+height:auto;
+margin: auto;
+
+}
+
+#column{
+background-color: transparent;
+cursor: default;
+width:100%;
+font-size: 1.1rem;
+color: #160c64;
+text-align:justify;
+margin: auto;
+
+
+}
+#column:focus{
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(67,65,222,1) 100%);
+color: gray;
+border-radius: 15px; 
+}
+
+#column:enabled{
+background-color: red;
+} 
+
+#sidebar-icon{
+padding-right:15px;
+}   
+
+#column:active{
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(67,65,222,1) 100%);
+}
+
+
+
+#form-submit{
+background-color: green;
+display: flex;
+margin: auto;
+width: 50%;
+}
+
+
+#container-table{
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(67,65,222,1) 100%);
+  display: flex;
+  position: relative;
+  left: 180px; 
+  top: 70px;
+  padding-right: 60px;
+  padding-top:50px;
+  justify-content: center;
+  min-height: 480px;
+  max-height: 5000px;
+  min-width: 1000px;
+  max-width: 1200px; 
+  color: #fff;
+  text-align: start;
+}
+th{
+  position: relative;
+  top: 5px;
+  font-size: 1.2rem;
+  align-items: center;
+  justify-items: center;
+}
+tr td{
+  padding-left: 5px;
+  color: #fff; 
+  border: 1px solid #fff;
+  min-height: 300px;
+  max-height: 300px;
+}
+.table-td{
+  min-width: 100%;
+  border: 1px solid #fff;
+  min-height: 200px;
+  max-height: 300px;
+  background-color: transparent;
+} 
+
+tr:hover{
+  background-color: rgb(205, 192, 192);
+  }
+#input-search{
+  position: relative;
+  background-color: #fff;
+  height: 30px;
+  width: 250px;
+  left: 100px;
+  bottom:100px;
+  border-radius: 5px;
+  border: #fff;
+}
+#input-filter{
+  position: relative;
+  background-color: #fff;
+  height: 30px;
+  width: 250px;
+  left: 400px;
+  bottom:130px;
+  border-radius: 5px;
+  border: #fff;
+}
+#select-option{
+  display: flex;
+  position: relative;
+  bottom: 40px;
+  height: 30px;
+  left: 50px;
+  width: 40px;
+  color: #160c64;
+  background-color: #fff;
+}

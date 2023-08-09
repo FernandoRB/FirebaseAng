@@ -1,0 +1,72 @@
+.selector-for-some-widget {
+  box-sizing: content-box;
+} 
+
+
+
+#user-nav{
+  position:fixed;    
+  width: 15%;
+  max-width: 40%;
+  height: 100%;
+  align-items: start;
+  align-content: start;
+  background-image: url("\src\assets\sidebar-white.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  
+}
+
+.title-nav{
+background-color: transparent;
+height: 40px;
+text-align: center;
+align-self: center;
+padding-top: 18px;
+color:  #160c64;
+margin-bottom: 20px;
+
+}
+.title-change{
+margin:auto;
+height: 2px;
+width: 80%;
+background-color:  gray;
+margin-bottom: 20px;
+}
+
+#nav-columns{
+background-color: transparent;
+height:auto;
+margin: auto;
+
+}
+
+#column{
+background-color: transparent;
+cursor: default;
+width:100%;
+font-size: 1.1rem;
+color: #160c64;
+text-align:justify;
+margin: auto;
+
+
+}
+#column:focus{
+background-color: #160c64;
+color: gray;
+border-radius: 15px; 
+}
+
+#column:enabled{
+background-color: red;
+} 
+
+#sidebar-icon{
+padding-right:15px;
+}   
+
+#column:active{
+background: #160c64;
+}

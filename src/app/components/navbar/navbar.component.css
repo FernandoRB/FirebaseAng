@@ -1,0 +1,8 @@
+#div-container-fluid{
+    position: relative;
+    flex-direction: row;
+    justify-content: end;
+    margin-left: 70%;
+    width: 30%;
+    
+}
