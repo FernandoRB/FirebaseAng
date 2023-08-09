@@ -64,19 +64,23 @@
   </ul>
 </div> 
 
-
+<div>
+  <input type="text" class="forms-control" placeholder="Search" [(ngModel)]="filter" name="filterpost" id="input-search"/>
+</div>
 
 <!--Filters and Tables-->
 <div class="container" id="container-table">
+  
 <select (change)="onTableSizeChange($event)" id="select-option">
   <option *ngFor="let size of tableSizes">
     {{size}} 
   </option>
 </select> 
 
-<table class="table-bordered" class="table-td">
-  <input type="text" class="forms-control" placeholder="Search" [(ngModel)]="filter" name="filterpost" id="input-search"/>
+<table class="table-bordered" class="table-td" id="dataTables-example">
 
+  <!-- <input class="form-control" type="date" class=" form-control" id="input-filter"> -->
+  
   <thead class="thead">
     <tr style="color: #fff;">
       <th>Date</th>
@@ -114,6 +118,6 @@
 
 </table>
 
-</div> 
+</div>
 
 

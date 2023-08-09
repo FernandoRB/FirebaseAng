@@ -27,6 +27,7 @@
   padding-top: 18px;
   color:  #160c64;
   margin-bottom: 20px;
+  font-size: 1.2rem;
   
   }
   .title-change{
@@ -133,3 +134,16 @@ input{
   padding-left:2px;
   padding-right: 2px;
 }
+
+/* #nav-profiles{
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(67,65,222,1) 100%);
+  width: 250px;
+  height: 40px;
+  position: relative;
+  padding-left: 100px;
+
+}
+
+#icon-profiles:hover{
+color: red;
+} */

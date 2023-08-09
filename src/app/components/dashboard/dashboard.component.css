@@ -85,17 +85,18 @@ width: 50%;
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(67,65,222,1) 100%);
   display: flex;
   position: relative;
-  left: 180px; 
+  left: 120px; 
   top: 70px;
   padding-right: 60px;
   padding-top:50px;
   justify-content: center;
-  min-height: 480px;
+  min-height: 600px;
   max-height: 5000px;
   min-width: 1000px;
   max-width: 1200px; 
   color: #fff;
   text-align: start;
+
 }
 th{
   position: relative;
@@ -103,6 +104,8 @@ th{
   font-size: 1.2rem;
   align-items: center;
   justify-items: center;
+  margin-top: 20px;
+
 }
 tr td{
   padding-left: 5px;
@@ -125,16 +128,23 @@ tr:hover{
 #input-search{
   position: relative;
   background-color: #fff;
-  height: 30px;
+  height: 40px;
   width: 250px;
-  left: 100px;
-  bottom:100px;
+  margin: auto;
+  left: 280px;
+  top:40px;
   border-radius: 5px;
   border: #fff;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(67,65,222,1) 100%);
+  color: #fff;
+  
+
 }
 #input-filter{
   position: relative;
-  background-color: #fff;
+  /* background-color: #fff;
+   */
+   background-color: red;
   height: 30px;
   width: 250px;
   left: 400px;
@@ -151,4 +161,9 @@ tr:hover{
   width: 40px;
   color: #160c64;
   background-color: #fff;
+}
+
+
+.input-group-append {
+  cursor: pointer;
 }

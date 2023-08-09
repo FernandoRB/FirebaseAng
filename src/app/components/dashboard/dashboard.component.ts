@@ -17,6 +17,7 @@ timeRef.getFullYear();
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
+  
 
 })
 
@@ -79,7 +80,7 @@ export class DashboardComponent implements OnDestroy, OnInit {
   dtTrigger: Subject<any> = new Subject<any>();
   data: any;
 
-
+  datepicker:any;
 
 
   constructor(
@@ -128,6 +129,9 @@ export class DashboardComponent implements OnDestroy, OnInit {
     // timeRef.setFullYear(2020);
     // console.log(timeRef); 
     // const q = query(citiesRef, where("state", "==", "CA"));
+
+
+
   }
 
 

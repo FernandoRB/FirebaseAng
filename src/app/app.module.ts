@@ -26,9 +26,6 @@ import { FilterPipe } from './pipes/filter.pipe';
 import {NgxPaginationModule} from 'ngx-pagination'; 
 import {DataTablesModule} from 'angular-datatables';
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
