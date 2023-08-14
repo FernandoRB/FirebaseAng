@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FilterPipe } from './pipes/filter.pipe';
 import {NgxPaginationModule} from 'ngx-pagination'; 
 import {DataTablesModule} from 'angular-datatables';
+// import { AngularFirestoreModule } from '@angular/fire/compat/firestore/'; 
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import {DataTablesModule} from 'angular-datatables';
   ],
   imports:[
     DataTablesModule.forRoot(),
+    // AngularFirestoreModule,
     NgxPaginationModule,
     FormsModule,
     BrowserModule,

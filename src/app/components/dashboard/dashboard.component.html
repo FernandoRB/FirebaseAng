@@ -70,17 +70,14 @@
 
 <!--Filters and Tables-->
 <div class="container" id="container-table">
-  
 <select (change)="onTableSizeChange($event)" id="select-option">
   <option *ngFor="let size of tableSizes">
     {{size}} 
   </option>
 </select> 
 
-<table class="table-bordered" class="table-td" id="dataTables-example">
 
-  <!-- <input class="form-control" type="date" class=" form-control" id="input-filter"> -->
-  
+<table class="table-bordered" class="table-td" id="dataTables-example">
   <thead class="thead">
     <tr style="color: #fff;">
       <th>Date</th>
@@ -94,7 +91,7 @@
       <th>Service</th>  
     </tr>
   </thead>
-  <tbody style="color: #160c64;" >
+  <tbody style="color: #160c64;">
      <tr *ngFor="let client of clients | filter:filter | paginate:{itemsPerPage:tableSize, currentPage: page, totalItems: count}; let i = index">
       <td>{{client.date}}</td>
       <td>{{client.name}}</td>

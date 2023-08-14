@@ -6,9 +6,6 @@ import Clients from 'src/app/interfaces/clients.interface';
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
 import { UsersService } from 'src/app/services/users.service';
-import * as moment from 'moment';
-import { query, where } from '@angular/fire/firestore';
-
 
 let timeRef = new Date();
 timeRef.getFullYear(); 
@@ -17,15 +14,9 @@ timeRef.getFullYear();
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
-  
-
 })
-
-
-
 export class DashboardComponent implements OnDestroy, OnInit {
   today: number = Date.now();
-
 
   //date
   CurrentTime:any;
@@ -70,21 +61,17 @@ export class DashboardComponent implements OnDestroy, OnInit {
       fecha: "30/04/2019"
     }
   ];
-  //Datatable 
-  
-
-  
-  hoy = new Date();
- 
   // dtTrigger = new Subject<any>();
   dtTrigger: Subject<any> = new Subject<any>();
   data: any;
 
   datepicker:any;
+  querys: any;
+  db: any;
 
 
   constructor(
-   
+    
     //Pagination
     private UsersService:UsersService,     
     //DB
@@ -105,8 +92,9 @@ export class DashboardComponent implements OnDestroy, OnInit {
       service: new FormControl(),
     })
   }
-  ngOnInit(): void {
-    this.clientService.getService().subscribe(clients => {
+  async ngOnInit(): Promise<void> {
+    this.clientService.getService().subscribe(clients => { 
+      
       console.log(clients)
       this.clients = clients;
       //Pagination
@@ -118,34 +106,18 @@ export class DashboardComponent implements OnDestroy, OnInit {
       pagingType: 'full_numbers',
       pageLength: 2
     };
-
     this.CurrentTime = '';
-    
-    // let timeRef = Date.now().toString()
-    // console.log(timeRef)
-    // let timeRef = new Date();
-    // timeRef.getFullYear();    
-    // console.log(timeRef); 
-    // timeRef.setFullYear(2020);
-    // console.log(timeRef); 
-    // const q = query(citiesRef, where("state", "==", "CA"));
 
 
-
-  }
-
-
+    //Calendar Setting
+    $('.data').on( 'change', function (ret :any) {
  
-  // compareDates() {
-  //   if (this.date1.getTime() < this.currentDate.getTime()) {
-  //     console.log("date1 is before current date");
-  //   }
-  //   if (this.date1.getTime() > this.currentDate.getTime()) {
-  //     console.log("date1 is after current date");
-  //   }
-  // }
-
-
+      let v = ret.target.value  
+      
+      $('#dataTables');
+  } );
+  }
+  
   postList():void{
     this.UsersService.getAllPosts().subscribe((response) =>{
       this.posts = response;
@@ -173,7 +145,12 @@ export class DashboardComponent implements OnDestroy, OnInit {
   }
   //Datatable
   ngOnDestroy(): void {
-    this.dtTrigger.unsubscribe();
-      }
-
+        this.dtTrigger.unsubscribe();
+          }
 }
+
+
+
+
+// .collection("clients")
+// .orderBy("date", "asc")
