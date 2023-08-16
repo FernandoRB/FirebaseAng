@@ -6,6 +6,7 @@ import Clients from 'src/app/interfaces/clients.interface';
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
 import { UsersService } from 'src/app/services/users.service';
+import * as XLSX from 'xlsx';
 
 let timeRef = new Date();
 timeRef.getFullYear(); 
@@ -17,7 +18,7 @@ timeRef.getFullYear();
 })
 export class DashboardComponent implements OnDestroy, OnInit {
   today: number = Date.now();
-
+  ExcelData:any;
   //date
   CurrentTime:any;
   dtOptions: DataTables.Settings = {};
@@ -69,7 +70,13 @@ export class DashboardComponent implements OnDestroy, OnInit {
   querys: any;
   db: any;
 
-
+  Seasons = [
+    { id: 1, name: 'Spring', fruit: 'Orange' },
+    { id: 2, name: 'Summer', fruit: 'Mango' },
+    { id: 3, name: 'Winter', fruit: 'Apple' },
+    { id: 4, name: 'Autumn', fruit: 'Banana' },
+  ];
+  name = 'ExcelSheet.xlsx';
   constructor(
     
     //Pagination
@@ -109,22 +116,42 @@ export class DashboardComponent implements OnDestroy, OnInit {
     this.CurrentTime = '';
 
 
-    //Calendar Setting
-    $('.dateadded').on( 'change', function (ret :any) {
+  //Calendar Setting
+  //   $('.dateadded').on( 'change', function (ret :any) {
  
-      let v = ret.target.value  
+  //     let v = ret.target.value  
       
-      $('#dataTables-example').DataTable().columns(3).search(v).draw();
-  } );
+  //     $('#dataTables-example').DataTable().columns(3).search(v).draw();
+  // } );
   }
-  
+  exportToExcel(): void {
+    let element = document.getElementById('dataTables-example');
+    const worksheet: XLSX.WorkSheet = XLSX.utils.table_to_sheet(element);
+    const book: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(book, worksheet, 'Sheet1');
+    XLSX.writeFile(book, this.name);
+  }
+
+
+
   postList():void{
     this.UsersService.getAllPosts().subscribe((response) =>{
       this.posts = response;
       console.log(this.posts);
     })
   }
+ // import Excel
+//  ReadExcel(event:any){
+//   let file = event.target.files[0];
+//   let fileReader = new FileReader();
+//   fileReader.onload = (e) =>{
+//     let workBook = XLSX.read(fileReader.result,{type: 'binary'});
+//     let sheetNames = workBook.SheetNames;
+//     this.ExcelData =  XLSX.utils.sheet_to_json(workBook.Sheets[sheetNames[0]])
 
+
+//   }
+// }
   onTableDataChange(event:any){
     this.page = event;
     this.postList();
@@ -149,7 +176,6 @@ export class DashboardComponent implements OnDestroy, OnInit {
     const response = await this.clientService.deleteService(clients);
     console.log(response);
   }
-  
 
 
 

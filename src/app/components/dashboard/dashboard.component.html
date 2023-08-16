@@ -72,7 +72,9 @@
 
 
 </div>
-
+<div>
+  <button  id="export" (click)="exportToExcel()">Exportar</button>
+</div>
 
 
 <!--Filters and Tables-->
@@ -119,8 +121,38 @@
     <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)">
     </pagination-controls>
   </div>  
-<!-- <div *ngIf="compareDates()" style="background-color: red; margin: auto; height: 200px; width: 200px;">Future Date passed</div> -->
 
 </table>
 
 </div>
+
+
+<!-- 
+
+
+
+<input type="file" (change)="ReadExcel($event)">
+<div style="width: 50%; position: relative; left: 600px; top: 800px; background-color: red;">
+  <table>
+<thead>
+  <tr>
+    <th scope="col">Roll No</th>
+    <th scope="col">First Name</th>
+    <th scope="col">Last Name</th>
+    <th scope="col">Class</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let data of ExcelData">
+    <th scope="row">{{data.RollNo}}</th>
+    <td>{{data.FirstName}}</td>
+    <td>{{data.LastName}}</td>
+    <td>{{data.class}}</td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+ -->
+
+

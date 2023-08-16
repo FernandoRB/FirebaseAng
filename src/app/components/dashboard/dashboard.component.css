@@ -145,6 +145,21 @@ tr:hover{
   
 
 }
+#export{
+  position: relative;
+  background-color: #fff;
+  height: 40px;
+  width: 250px;
+  margin: auto;
+  left: 1000px;
+  bottom:40px;
+  border-radius: 5px;
+  border: #fff;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(67,65,222,1) 100%);
+  color: #fff;
+  
+
+}
 #input-filter{
   position: relative;
   height: 30px;
