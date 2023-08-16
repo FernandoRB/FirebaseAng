@@ -4,7 +4,7 @@ export default interface Clients{
     id:any; // ID Cloud
     identificator:any ; // RUT
     contact:any; // Segundo Contacto
-    fon:number; // Fono 
+    fon:any; // Fono 
     direction:any;// Direccion
     commune: any; // Comuna
     system: any; // Sistema

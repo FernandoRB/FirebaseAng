@@ -25,6 +25,8 @@
   padding-top: 18px;
   color:  #160c64;
   margin-bottom: 20px;
+font-size: 1.4rem;
+
   
   }
   .title-change{
@@ -46,7 +48,7 @@
   background-color: transparent;
   cursor: default;
   width:100%;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #160c64;
   text-align:justify;
   margin: auto;

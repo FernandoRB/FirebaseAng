@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -25,8 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FilterPipe } from './pipes/filter.pipe';
 import {NgxPaginationModule} from 'ngx-pagination'; 
 import {DataTablesModule} from 'angular-datatables';
-// import { AngularFirestoreModule } from '@angular/fire/compat/firestore/'; 
-
+import localEs from '@angular/common/locales/es'
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localEs, 'es');
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +60,7 @@ import {DataTablesModule} from 'angular-datatables';
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore())
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue: 'es'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

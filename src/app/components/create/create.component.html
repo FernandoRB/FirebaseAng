@@ -1,6 +1,6 @@
 <!--sidebar menu-->
 <div class="float-start" id="user-nav">
-    <p class="title-nav">Client Control System</p>
+    <p class="title-nav">Detectamos</p>
     <hr class="title-change">
     <ul class="nav flex-column" id="nav-columns">
   
@@ -9,38 +9,38 @@
       <a class="nav-link" aria-current="Dashboard" routerLink="/dashboard" id="column">
       
         <i class="fa-solid fa-house" style="color: #b0b6bf;"></i>
-         Dashboard
+        Inicio
         </a>
     </li>  
     <li class="nav-item">
       
       <a class="nav-link " aria-current="Create" routerLink="/create" id="column">
         <i class="fa-sharp fa-solid fa-plus"  style="color: #b0b6bf;"></i>
-        Create
+        Crear
       </a>
     </li>
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a class="nav-link " aria-current="Chat" routerLink="/chat" id="column">
         <i class="fa-solid fa-comments" style="color: #b0b6bf;"></i>
         Chat
       </a>
-    </li>
+    </li> -->
     <li class="nav-item">
       <a class="nav-link" aria-current="Calendar" routerLink="/calendar" id="column">
         <i class="fa-solid fa-calendar-days" style="color: #b0b6bf;"></i>
-        Calendar
+        Calendario
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" aria-current="Maps" routerLink="/maps" id="column">
         <i class="fa-solid fa-location-dot" style="color: #b0b6bf;"></i>
-        Maps
+        Mapas
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" aria-current="Analytics" routerLink="/analytics" id="column">
         <i class="fa-sharp fa-solid fa-chart-simple" style="color: #b0b6bf;" ></i>
-        Analytics
+        Analiticas
       </a>
     </li> 
   </ul>
@@ -66,53 +66,53 @@
   </div> 
 
 <!--form-->
-<p class="title-form">Create a New Profile</p>
+<p class="title-form">Añadir Nuevo Cliente</p>
 
 <!-- <div class="form-submit"> -->
   <form [formGroup]="formulary" (ngSubmit)="onSubmit()" class="container-form">
     <!--date-->
     <div class="mb-3">
-      <label class="form-label">Date</label>
+      <label class="form-label">Fecha</label>
       <input type="text" class="form-control" formControlName="date">
     </div>
     <!--name-->
     <div class="mb-3">
-      <label class="form-label">Name</label>
+      <label class="form-label">Nombre</label>
       <input type="text" class="form-control" formControlName="name">
     </div>
     <!--id-->
     <div class="mb-3">
-      <label class="form-label">identificator</label>
+      <label class="form-label">RUT</label>
       <input type="text" class="form-control" formControlName="identificator">
     </div>
     <!--contact-->
     <div class="mb-3">
-      <label class="form-label">Second Contact</label>
+      <label class="form-label">Contacto</label>
       <input type="text" class="form-control" formControlName="contact">
     </div>
     <!--fon-->
     <div class="mb-3">
-      <label class="form-label">Fon</label>
-      <input type="number" class="form-control" formControlName="fon">
+      <label class="form-label">Fono</label>
+      <input type="text" class="form-control" formControlName="fon" maxlength="9">
     </div>
     <!--direction-->
     <div class="mb-3">
-      <label class="form-label">Direction</label>
+      <label class="form-label">Direccion</label>
       <input type="text" class="form-control" formControlName="direction">
     </div>
     <!--commune-->
     <div class="mb-3">
-      <label class="form-label">Commune</label>
+      <label class="form-label">Comuna</label>
       <input type="text" class="form-control" formControlName="commune">
     </div>
     <!--system-->
     <div class="mb-3">
-      <label class="form-label">System</label>
+      <label class="form-label">Sistema</label>
       <input type="text" class="form-control" formControlName="system">
     </div>
     <!--service-->
     <div class="mb-3">
-      <label class="form-label">Service</label>
+      <label class="form-label">Servicio</label>
       <input type="text" class="form-control" formControlName="service">
     </div>
     
