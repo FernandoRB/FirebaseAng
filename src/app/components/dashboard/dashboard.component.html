@@ -65,8 +65,14 @@
 </div> 
 
 <div>
-  <input type="text" class="forms-control" placeholder="Search" [(ngModel)]="filter" name="filterpost" id="input-search"/>
+  <input type="text" class="forms-control" placeholder="Buscar" [(ngModel)]="filter" name="filterpost" id="input-search"/>
 </div>
+<div  id="delete-button" > 
+  <p>{{today |  date:'yyy'}}</p>
+  <p>{{today |  date:'fullDate'}}</p>
+</div>
+
+
 
 <!--Filters and Tables-->
 <div class="container" id="container-table">
@@ -80,15 +86,15 @@
 <table class="table-bordered" class="table-td" id="dataTables-example">
   <thead class="thead">
     <tr style="color: #fff;">
-      <th>Date</th>
-      <th>Name</th> 
-      <th>id</th>
-      <th>Second Contact</th>  
-      <th>Fon</th>  
-      <th>Direction</th>  
-      <th>Commune</th>  
-      <th>System</th> 
-      <th>Service</th>  
+      <th>Fecha</th>
+      <th>Cliente</th> 
+      <th>Rut</th>
+      <th>Contacto</th>  
+      <th>Fono</th>  
+      <th>Direccion</th>  
+      <th>Comuna</th>  
+      <th>Sistema</th> 
+      <th>Servicio</th> 
     </tr>
   </thead>
   <tbody style="color: #160c64;">
@@ -102,9 +108,10 @@
       <td>{{client.commune}}</td>
       <td>{{client.system}}</td>
       <td>{{client.service}}</td>
-      <!-- <p>{{today |  date:'yyy'}}</p> -->
-      <!-- <p>{{client.date + 20}} + {{today |  date:'fullDate'}}</p> -->
 
+      <button (click)="onClickDelete(client)" id="delete" class="btn" >
+        <i class="fa-solid fa-eraser" style="color: #b0b6bf;"></i>
+      </button>
     </tr>
   </tbody>
   <div>
@@ -116,5 +123,3 @@
 </table>
 
 </div>
-
-

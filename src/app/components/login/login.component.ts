@@ -30,7 +30,8 @@ export class LoginComponent implements OnInit {
         console.log(response);
         this.router.navigate(['/main']);
       })
-      .catch(error => console.log(error));
+      .catch(error => 
+        alert("Clave Erronea"));
       
   }
 

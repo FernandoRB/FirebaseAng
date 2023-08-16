@@ -186,3 +186,18 @@ tr:hover{
   text-align: start;
 }
 
+#delete-button{
+  position: relative;
+  display: flex;
+  height: 40px;
+  width: 320px;
+  text-align: center;
+  padding: auto;
+  padding-top: 6px;
+  padding-left:50px;
+  left: 600px;
+  color: #fff;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(67,65,222,1) 100%);
+  border-radius: 5px;
+
+}

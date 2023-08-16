@@ -20,33 +20,25 @@ export class ClientsService {
     return addDoc(clientRef, client);
   }
 
-  // getService(): Observable<Clients[]> {
-  //   const clientRef = collection(this.firestore, 'clients');
-  //   return collectionData(clientRef, { idField: 'id'}) as Observable<Clients[]>;
-  // }
-
-
   getService(): Observable<Clients[]> {
      const clientRef = collection(this.firestore, 'clients');
      return collectionData(clientRef, { idField: 'id'}) as Observable<Clients[]>;
    }
    
-  // getFilters(){
-  //   .collection("clients")
-  //   const clientRef = collection(this.firestore, 'clients');
-  //    return collectionData(clientRef, { idField: 'id'}) as Observable<Clients[]>;
-
-  //    .collection("clients")
-  //    .where("date", "==", "2023")
-  // }
-
-  deleService(client: Clients) {
+  deleteService(client: Clients) {
     const placeDocRef = doc(this.firestore, `clients/${client.id}`);
     return deleteDoc(placeDocRef);
   }
 
-
 }
+
+
+
+
+
+
+
+
     // let timeRef = new Date();
     // timeRef.getFullYear();    
     // console.log(timeRef); 

@@ -94,11 +94,11 @@ export class DashboardComponent implements OnDestroy, OnInit {
   }
   async ngOnInit(): Promise<void> {
     this.clientService.getService().subscribe(clients => { 
-      
       console.log(clients)
       this.clients = clients;
       //Pagination
       this.postList();
+
     })
 
     //Datatable Start
@@ -110,11 +110,11 @@ export class DashboardComponent implements OnDestroy, OnInit {
 
 
     //Calendar Setting
-    $('.data').on( 'change', function (ret :any) {
+    $('.dateadded').on( 'change', function (ret :any) {
  
       let v = ret.target.value  
       
-      $('#dataTables');
+      $('#dataTables-example').DataTable().columns(3).search(v).draw();
   } );
   }
   
@@ -143,14 +143,21 @@ export class DashboardComponent implements OnDestroy, OnInit {
       })
       .catch(error => console.log(error));
   }
+
+
+  async onClickDelete(clients: Clients) {
+    const response = await this.clientService.deleteService(clients);
+    console.log(response);
+  }
+  
+
+
+
   //Datatable
   ngOnDestroy(): void {
         this.dtTrigger.unsubscribe();
           }
 }
-
-
-
 
 // .collection("clients")
 // .orderBy("date", "asc")

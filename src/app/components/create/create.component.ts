@@ -50,6 +50,7 @@ export class CreateComponent implements OnInit {
         this.router.navigate(['/login']);
       })
       .catch(error => console.log(error));
+      
   }
 
 
@@ -58,6 +59,7 @@ export class CreateComponent implements OnInit {
     console.log(this.formulary.value)
     const response = await this.clientService.addService(this.formulary.value);
     console.log(response);
+    alert("Registrado");
     this.formulary.reset();
   }
 }
