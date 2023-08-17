@@ -12,6 +12,8 @@ export const environment = {
     authDomain: 'login-f0245.firebaseapp.com',
     messagingSenderId: '392859149967',
   },
-  production: false
+  production: false,
+  
 };
+
 
