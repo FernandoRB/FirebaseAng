@@ -87,7 +87,7 @@ width: 50%;
   display: flex;
   position: relative;
   left: 120px; 
-  top: 70px;
+  top: -20px;
   border-radius: 5px;
   padding-right: 60px;
   padding-top:50px;
@@ -185,7 +185,7 @@ tr:hover{
   cursor: pointer;
 }
 
-#pagination-controls{
+.pagination-controls-list{
   width:300px;
   margin-top: 10px;
 }
